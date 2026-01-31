@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Mini Guide</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+        
+        body {
+            background: #f0f2f5;
+            padding: 20px;
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+        }
+        
+        h1 {
+            color: #2c3e50;
+            text-align: center;
+            margin-bottom: 10px;
+        }
+        
+        .subtitle {
+            text-align: center;
+            color: #7f8c8d;
+            margin-bottom: 30px;
+        }
+        
+        .topic {
+            background: #ecf0f1;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 8px;
+            border-left: 5px solid #3498db;
+        }
+        
+        h2 {
+            color: #2c3e50;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+        }
+        
+        h2 span {
+            background: #3498db;
+            color: white;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 10px;
+        }
+        
+        .example {
+            background: #2c3e50;
+            color: white;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 5px;
+            font-family: monospace;
+            overflow-x: auto;
+        }
+        
+        .output {
+            background: #dfe6e9;
+            padding: 15px;
+            margin: 10px 0;
+            border-radius: 5px;
+            border: 1px solid #b2bec3;
+        }
+        
+        .explain {
+            background: #fff9e6;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 5px;
+            border-left: 4px solid #f39c12;
+        }
+        
+        .tip {
+            background: #e8f6f3;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 5px;
+            border-left: 4px solid #1abc9c;
+            font-size: 0.9em;
+        }
+        
+        .important {
+            color: #e74c3c;
+            font-weight: bold;
+        }
+        
+        footer {
+            text-align: center;
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 1px solid #ddd;
+            color: #7f8c8d;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>📘 HTML COMPLETE MINI-GUIDE</h1>
+        <p class="subtitle">Everything about HTML explained in small portions</p>
+        
+        <!-- 1. HTML STRUCTURE -->
+        <div class="topic">
+            <h2><span>1</span> HTML Structure</h2>
+            <div class="example">
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;title&gt;Page Title&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    Content goes here
+&lt;/body&gt;
+&lt;/html&gt;
+            </div>
+            <div class="explain">
+                <p><span class="important">Parts:</span></p>
+                <ul>
+                    <li><code>&lt;!DOCTYPE html&gt;</code> → Declares HTML5</li>
+                    <li><code>&lt;html&gt;</code> → Root element</li>
+                    <li><code>&lt;head&gt;</code> → Contains page info (not visible)</li>
+                    <li><code>&lt;body&gt;</code> → Contains visible content</li>
+                </ul>
+            </div>
+        </div>
+        
+        <!-- 2. HEADINGS -->
+        <div class="topic">
+            <h2><span>2</span> Headings (h1 to h6)</h2>
+            <div class="example">
+&lt;h1&gt;Main Heading (Biggest)&lt;/h1&gt;
+&lt;h2&gt;Sub Heading&lt;/h2&gt;
+&lt;h3&gt;Smaller Heading&lt;/h3&gt;
+&lt;h4&gt;Small Heading&lt;/h4&gt;
+&lt;h5&gt;Smaller&lt;/h5&gt;
+&lt;h6&gt;Smallest&lt;/h6&gt;
+            </div>
+            <div class="output">
+                <h1 style="font-size: 2em; margin: 5px 0;">Main Heading</h1>
+                <h2 style="font-size: 1.5em; margin: 5px 0;">Sub Heading</h2>
+                <h3 style="font-size: 1.17em; margin: 5px 0;">Smaller Heading</h3>
+            </div>
+            <div class="tip">
+                <strong>Tip:</strong> Use only ONE h1 per page for main title.
+            </div>
+        </div>
+        
+        <!-- 3. PARAGRAPHS -->
+        <div class="topic">
+            <h2><span>3</span> Paragraphs & Text</h2>
+            <div class="example">
+&lt;p&gt;This is a paragraph.&lt;/p&gt;
+&lt;p&gt;This is another paragraph.&lt;/p&gt;
+&lt;span&gt;Inline text&lt;/span&gt;
+&lt;span&gt;More inline text&lt;/span&gt;
+&lt;br&gt; ← Line break
+&lt;hr&gt; ← Horizontal line
+            </div>
+            <div class="output">
+                <p>This is a paragraph.</p>
+                <p>This is another paragraph.</p>
+                <span>Inline text</span>
+                <span>More inline text</span>
+                <br>
+                <hr>
+            </div>
+            <div class="explain">
+                <p><span class="important">Difference:</span></p>
+                <ul>
+                    <li><code>&lt;p&gt;</code> → Block element (starts new line)</li>
+                    <li><code>&lt;span&gt;</code> → Inline element (stays in same line)</li>
+                </ul>
+            </div>
+        </div>
+        
+        <!-- 4. LINKS -->
+        <div class="topic">
+            <h2><span>4</span> Links (Anchor Tag)</h2>
+            <div class="example">
+&lt;a href="https://google.com"&gt;Visit Google&lt;/a&gt;
+&lt;a href="page.html" target="_blank"&gt;Open in New Tab&lt;/a&gt;
+&lt;a href="#section"&gt;Jump to Section&lt;/a&gt;
+            </div>
+            <div class="output">
+                <a href="#" style="color: #3498db;">Example Link</a>
+            </div>
+            <div class="explain">
+                <p><span class="important">Attributes:</span></p>
+                <ul>
+                    <li><code>href</code> → Where link goes (URL or file)</li>
+                    <li><code>target="_blank"</code> → Opens in new tab</li>
+                </ul>
+            </div>
+        </div>
+        
+        <!-- 5. IMAGES -->
+        <div class="topic">
+            <h2><span>5</span> Images</h2>
+            <div class="example">
+&lt;img src="image.jpg" alt="Description"&gt;
+&lt;img src="pic.png" width="200" height="100"&gt;
+            </div>
+            <div class="output">
+                <div style="background: #bdc3c7; width: 200px; height: 100px; display: flex; align-items: center; justify-content: center; border: 2px dashed #7f8c8d;">
+                    [Image Placeholder]
+                </div>
+            </div>
+            <div class="tip">
+                <strong>Important:</strong> Always use <code>alt</code> attribute for accessibility!
+            </div>
+        </div>
+        
+        <!-- 6. LISTS -->
+        <div class="topic">
+            <h2><span>6</span> Lists</h2>
+            <div class="example">
+&lt;ul&gt; ← Unordered (Bullets)
+    &lt;li&gt;Item 1&lt;/li&gt;
+    &lt;li&gt;Item 2&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;ol&gt; ← Ordered (Numbers)
+    &lt;li&gt;First&lt;/li&gt;
+    &lt;li&gt;Second&lt;/li&gt;
+&lt;/ol&gt;
+            </div>
+            <div class="output">
+                <ul style="margin-left: 20px;">
+                    <li>Item 1</li>
+                    <li>Item 2</li>
+                </ul>
+                <ol style="margin-left: 20px;">
+                    <li>First</li>
+                    <li>Second</li>
+                </ol>
+            </div>
+        </div>
+        
+        <!-- 7. FORMS -->
+        <div class="topic">
+            <h2><span>7</span> Forms</h2>
+            <div class="example">
+&lt;form&gt;
+    &lt;label&gt;Name:&lt;/label&gt;
+    &lt;input type="text"&gt;&lt;br&gt;
+    
+    &lt;label&gt;Email:&lt;/label&gt;
+    &lt;input type="email"&gt;&lt;br&gt;
+    
+    &lt;input type="checkbox"&gt; Agree&lt;br&gt;
+    
+    &lt;button type="submit"&gt;Submit&lt;/button&gt;
+&lt;/form&gt;
+            </div>
+            <div class="output">
+                <div style="background: #f8f9fa; padding: 15px; border-radius: 5px;">
+                    <label>Name:</label>
+                    <input type="text" placeholder="Enter name" style="padding: 5px; margin: 5px;"><br>
+                    <label>Email:</label>
+                    <input type="email" placeholder="email@example.com" style="padding: 5px; margin: 5px;"><br>
+                    <input type="checkbox"> Agree<br><br>
+                    <button style="padding: 8px 15px; background: #3498db; color: white; border: none; border-radius: 4px;">Submit</button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- 8. TABLES -->
+        <div class="topic">
+            <h2><span>8</span> Tables</h2>
+            <div class="example">
+&lt;table border="1"&gt;
+    &lt;tr&gt; ← Table Row
+        &lt;th&gt;Name&lt;/th&gt; ← Table Header
+        &lt;th&gt;Age&lt;/th&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td&gt;John&lt;/td&gt; ← Table Data
+        &lt;td&gt;25&lt;/td&gt;
+    &lt;/tr&gt;
+&lt;/table&gt;
+            </div>
+            <div class="output">
+                <table border="1" style="border-collapse: collapse; width: 100%;">
+                    <tr>
+                        <th style="padding: 8px; background: #f2f2f2;">Name</th>
+                        <th style="padding: 8px; background: #f2f2f2;">Age</th>
+                    </tr>
+                    <tr>
+                        <td style="padding: 8px;">John</td>
+                        <td style="padding: 8px;">25</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        
+        <!-- 9. SEMANTIC TAGS -->
+        <div class="topic">
+            <h2><span>9</span> Semantic Tags</h2>
+            <div class="example">
+&lt;header&gt;Top section&lt;/header&gt;
+&lt;nav&gt;Navigation&lt;/nav&gt;
+&lt;section&gt;Content section&lt;/section&gt;
+&lt;article&gt;Blog post&lt;/article&gt;
+&lt;footer&gt;Bottom section&lt;/footer&gt;
+            </div>
+            <div class="explain">
+                <p><span class="important">Why use them?</span></p>
+                <ul>
+                    <li>Better for SEO</li>
+                    <li>Easier to read code</li>
+                    <li>Better accessibility</li>
+                </ul>
+            </div>
+            <div class="tip">
+                <strong>Tip:</strong> Use semantic tags instead of <code>&lt;div&gt;</code> when possible.
+            </div>
+        </div>
+        
+        <!-- QUICK REFERENCE -->
+        <div class="topic" style="background: #e8f4fc; border-left-color: #2980b9;">
+            <h2><span>★</span> Quick Reference</h2>
+            <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px;">
+                <div>
+                    <h3>Basic Tags</h3>
+                    <ul>
+                        <li><code>&lt;h1&gt;-&lt;h6&gt;</code> → Headings</li>
+                        <li><code>&lt;p&gt;</code> → Paragraph</li>
+                        <li><code>&lt;a&gt;</code> → Link</li>
+                        <li><code>&lt;img&gt;</code> → Image</li>
+                        <li><code>&lt;div&gt;</code> → Container</li>
+                    </ul>
+                </div>
+                <div>
+                    <h3>Form Tags</h3>
+                    <ul>
+                        <li><code>&lt;input&gt;</code> → Input field</li>
+                        <li><code>&lt;button&gt;</code> → Button</li>
+                        <li><code>&lt;select&gt;</code> → Dropdown</li>
+                        <li><code>&lt;textarea&gt;</code> → Text area</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Pycharm -->
+        <div class="topic">
+            <h2><span>💡</span> Using PyCharm for HTML</h2>
+            <div class="explain">
+                <p><span class="important">Steps:</span></p>
+                <ol>
+                    <li>Open PyCharm</li>
+                    <li>Create New Project</li>
+                    <li>Right-click project → New → HTML File</li>
+                    <li>Name it <code>index.html</code></li>
+                    <li>Start typing HTML code</li>
+                    <li>Right-click → Open in Browser to view</li>
+                </ol>
+            </div>
+            <div class="tip">
+                <strong>Pro Tip:</strong> In PyCharm, just type <code>html:5</code> and press Tab to get full HTML structure!
+            </div>
+        </div>
+        
+        <footer>
+            <p>📚 <strong>Next Step:</strong> Practice creating a simple website with all these elements!</p>
+            <p style="margin-top: 10px; font-size: 0.9em;">Start with: 1. HTML Structure → 2. Add heading → 3. Add paragraph → 4. Add image → 5. Add link</p>
+        </footer>
+    </div>
+
+    <script>
+        // Simple JavaScript to make examples interactive
+        document.querySelectorAll('a[href="#"]').forEach(link => {
+            link.onclick = function(e) {
+                e.preventDefault();
+                alert('This is how links work! In real website, this would navigate to another page.');
+            };
+        });
+        
+        document.querySelectorAll('button').forEach(button => {
+            button.onclick = function() {
+                alert('Form submitted! (This is JavaScript working)');
+            };
+        });
+    </script>
+</body>
+</html>
